@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;	//Oto komentarz
+
+int main()
+{
+    cout << "Hello world!" << endl;
+    try{
+        ifstream fileIf("kod.txt");	//Oto komentarz
+        if(!fileIf.is_open()){
+            throw -1;
+        }
+        char a, b;
+        string linia;
+        while(fileIf.get(a)){
+            b= fileIf.peek();
+            if(a=='/' && b=='/'))fileIf.ignore();	//Oto komentarz
+            else if(a == EOF){
+                cout << linia << endl;
+                linia = "";
+            }	//Oto komentarz
+            else{
+                linia += a;
+            }
+        }
+        fileIf.close();
+    }
+    catch(int e){	//Oto komentarz
+        cerr << "Wystapil blad: " << e.what() << endl;
+    }
+    return 0;	//Oto komentarz
+}
