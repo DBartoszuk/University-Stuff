@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1704802992 source:c:\users\szczu\documents\studia\semestr 5\oop c++\lab11\bartoszuk_dominik_5.1_lab11_zad1\main.cpp
+	<iostream>
+	"bufferarr.h"
+	"bufferfile.h"
+
+1704802109 c:\users\szczu\documents\studia\semestr 5\oop c++\lab11\bartoszuk_dominik_5.1_lab11_zad1\bufferarr.h
+	"buffer.h"
+	<iostream>
+
+1704800975 c:\users\szczu\documents\studia\semestr 5\oop c++\lab11\bartoszuk_dominik_5.1_lab11_zad1\buffer.h
+	<iostream>
+
+1704803301 c:\users\szczu\documents\studia\semestr 5\oop c++\lab11\bartoszuk_dominik_5.1_lab11_zad1\bufferfile.h
+	"buffer.h"
+	<iostream>
+	<fstream>
+	<memory>
+
