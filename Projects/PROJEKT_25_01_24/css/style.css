@@ -1,0 +1,406 @@
+			/*OGÓLNE*/
+body{
+	background-color: #000;
+	color: #000040; 	/*ustawia domyślny kolor czcionki na nieco ciemniejszy*/
+	background-image: url(../Images/tlo.jpg);	/*Dodanie obrazka jako tło (obrazek i Css są w innych folderach, stąd .. w ścieżce)*/
+	background-size: cover;		/*Zmienia obraz tak, aby pasował do całego konteneru, nawet jeżeli musi być przycięty/rozciągnięty*/
+	font-family: "Times New Roman", serif;	/*Ustawienie czcionki dla calej strony*/
+	text-align: center;	/*Sprawia, że tekst, zdjęcia i karuzela na stronie głównej starają się być wyśrodkowane*/
+}
+#menu a{
+	font-family: Arial;	/*Zmiana czcionki dla menu*/
+}
+#baner{
+	background: #f0247c;
+	margin-bottom: 0px;	/*Margines, odstęp od kolejnych elementów*/
+	padding: 10px;		/*Wypełnienie, odstęp pomiędzy zwartością elementu, a jego granicą*/
+}
+
+h1, h2{
+	color: #d9d7fa;
+	text-align: center;
+}
+h3{
+	padding: 10px;		/*Wypełnienie 10 pikseli*/
+	margin: 0 auto;		/*Ustawienie marginesów z prawej i lewej na zero -> wyśrodkowanie napisu*/
+	background: #46f25d;
+	color: #712099;
+	width: 20%;			/*Zmiana szerokości nagłówka. Dzięki temu, tło jest widoczne, bez tego nagłówek zajmowałby całą szerokość*/
+}
+
+footer{
+	clear: both; 			/*Umieszczenie stopki na dole ekranu, bez tego dziwnie się zachowywała*/
+	width: 30%;				/*Inaczej zajmowałaby całą dostępną szerokość*/
+	margin: 0 auto; 		/*Bez auto stopka nie będzie wyśrodkowana*/
+	padding: 5px 0px 5px 0px;	/*Wypełnienie: góra 5px, prawe 0px, dół 5px, lewe 0px*/
+	background: #4de83f;	/*Kolor zielony*/
+}
+
+			/*DOTYCZĄCE STRONY GŁÓWNEJ*/
+
+#tresc {
+	display: flex;		/*Flex, pojawił się w Lab5, pomaga w ustawieniu strony*/
+	background: #e866bd;
+	align-items: stretch;	/*Rozciągnięcie elementów by pasowały do kontenera, w którym są*/
+}
+
+#karuzela {
+	flex-basis: 60%;	/*Domyślna szerokość elemntu flex to 60% szerokości ekranu, bez tego tekst by ją pchał w lewo*/
+	padding: 2%;
+}
+
+#strona_glowna {
+	text-align: justify;	/*Justify, by tekst był wyjustowany*/
+	flex-basis: 40%;		/*Domyślna szerokość elemntu flex to 40% szerokości ekranu*/
+	padding: 2%;
+}
+
+#dalej{
+	background: #e866bd;
+}
+
+#dalej img{
+	width: 50%;				/*Szerokość na 50% szerokości strony*/
+	height: 25%;			/*Wysokośc na 25% wysokości strony*/
+	border: 10px #fff;		/*Obramowanie grube na 10 pikseli, kolor biały*/
+	border-style: groove;	/*Efekt nieco 3D z pewnym cieniowaniem*/
+	border-radius: 5px;		/*Zaokrąglenie rogów*/
+}
+
+#adnotacja{
+	background: #fff;	/*Tło tekstu białe*/
+	color: #470f32;		/*Kolor nieco jaśniejszy niż czarny, dobra artystyczna praktyka rzekomo*/
+	font-size: 13px;	/*Rozmiar czcionki*/
+	width: 30%;			/*Bez tego adnotacja zajmowałaby całą szerokość, a nie tylko miejsce pod obrazkiem*/
+	margin: 0 auto;		/*Wyśrodkowanie*/
+}
+
+/*Czcionka Cambria, w razie problemów będzie ustawiona sans-serif, rozmiar 15, pogrubiona*/
+#wznioslosci{
+	font-family: "Cambria", sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.kolumna{
+	float: left;	/*Podział na 2 kolumny*/
+	width: 50%;		/*które zajmują tyle samo miejsca na stronie*/
+	padding: 10px;	/*Z wypełnieniem 10 pikseli*/
+}
+
+#lewy.kolumna{			/*Najpierw id, potem class, bez spacji. Spacja oznacza "element z klasą wewnątrz elementu z id"*/
+	background: #f0b6d1;
+}
+#prawy.kolumna{			/*a bez spacji oznacza "element co ma i klasę i id"*/
+	background: #d1f0b6;
+}
+
+#map{
+	margin: 0px auto;
+	display: flex;
+	border: solid 2px #1a1c63;
+}
+
+/*Szerokość i wysokość odpowiadające mapie*/
+#pogodaKontener{
+	height: 325px;
+	width: 425px;
+	background: #70afc4;
+	margin: 0px auto;
+	border: solid 2px #1a1c63;
+}
+
+.buttonPogoda{
+	font: 18px Roboto, sans-serif;
+	background: #ad9447;
+	color: #ebedda;
+	border: solid 2px #e3b89f;
+}
+
+.buttonPogoda:hover{
+	background: #e8e3ca;
+	color: #332c08;
+	border: solid 2px #3b2011;
+}
+
+#pogoda{
+	font: 20px Georgia, serif;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;	/*Efekt cienia tekstu, w pewnym sensie działa niczym obwódka*/
+	/*Pozycja pozioma cienia, pozycja pionowa, rozmycie i kolor*/
+	padding: 5px;
+	margin: 10px;
+}
+
+			/*DOTYCZĄCE GALERII*/
+			
+#galeria{
+	background: #7fd4f5;
+	width: 80%;			/*Niech nie zajmuje całej strony, pokaz troche tla*/
+	margin: 0 auto;		/*Wysrodkowanie*/
+}
+
+.slajd{
+	display: inline-block;	/*Elementy wyświetlane inline, ale mogę modyfikować szerokość i wysokość by utworzyć efekt "kolumn"*/
+	width: 30%;				/*Chcę na dużych ekranach 3 kolumny*/
+	border-radius: 10px;	/*Zaokrąglenie obramowania*/
+	background: #f5a07f;
+	padding: 1% 2%;			/*Wypełnienie pozwala zobaczyć pomarańczowy kolor*/
+	margin: 1%;				/*Odstęp między zdjęciami, taki sam dla pionu i poziomu*/
+}
+.slajd:hover{				/*Pseudoklasa hover, pozwala zmienić styl elementu gdy najedziemy na niego myszką*/
+	background: #573256;
+}
+
+/*Miniaturki zajmują pełną szerokość i wysokosć swoich kontenerów*/
+.slajd img{
+	width: 100%;
+	height: 100%;
+}
+
+/*Zdjęcie zajmuje tylko 55%x30% ekranu, ma kolorowe obramowanie, które jest solidne, zaokrąglone i grube na 10 px*/
+#zdjecie{
+	width: 55%;
+	height: 30%;
+	border: solid 10px #ad109e;
+	border-radius: 10px;
+}
+
+/*Ogólne style dla przycisków w galerii*/
+#kontener .galeriaInner{
+	padding: 1% 2%;
+	font-size: 25px; 
+	font-weight: bold; 
+	font-family: "Rockwell", serif;
+        text-decoration: none; /* Usuwa podkreślenie */
+        color: black; /* Zmienia kolor linku na czarny */
+}
+
+/*Style dla indywidualnych przycisków*/
+#galButt{
+	background: #f28ddb;
+	border: solid 5px #7fd46c;
+}
+
+#galButt:hover{
+	background: #edd3ed;
+	border-color: #253027;
+}
+
+#backButt{
+	background: #e09175;
+	border: solid 5px #4260c9;
+}
+
+#backButt:hover{
+	background: #e7b9eb;
+	border-color: #161c70;
+}
+
+			/*DOTYCZĄCE LOTERII*/
+#logreg, #logreg tr, #logreg td{
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 3px #332415;
+        table-layout: fixed;
+        width: 30%;
+}
+
+#form_tresc td{
+    width: 49%;
+    height: 50px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#form_tresc a{
+	padding: 1% 2%;
+	font-size: 16px; 
+	font-family: "Rockwell", serif;
+        text-decoration: none; /* Usuwa podkreślenie */
+        color: black; /* Zmienia kolor linku na czarny */
+}
+                        
+#form_intro{
+	background: #ffb5f9;
+	color: #381321;
+	font-size: 17px;
+	font-weight: bold;
+	border: solid 5px #e866bd;
+}
+
+#form_tekst{
+        background: #cf9353;
+        color: #090e5e;
+	font-size: 15px;
+	font-weight: bold;
+	border: solid 5px #332415;
+}
+
+#form_container{
+	padding:10px;
+}
+
+form{
+	border: double 15px #482700;	/*Podwójna, gruba, brązowa ramka*/
+	width: 65%;
+	margin: 0 auto;
+}
+
+form *{
+	padding: 4px;
+}
+
+/*By label elementu formularza i jego pole znajdowały się w tej samej linii*/
+.form_ele{
+	width: 40%;
+	display: inline-block;
+}
+
+.nieparzysty{
+	background: #e666e8;
+}
+
+.parzysty{
+	background: #68e866;
+}
+
+.przycisk{
+	background: #330331;
+	color: #fac0a7;
+	border: solid 5px #0f5c16;
+	margin: 2px;
+}
+.przycisk:hover{
+	background: #d157f2;
+	color: #26120a;
+	border: solid 5px #406b2f;
+	margin: 2px;
+}
+
+                        /*DOTYCZĄCE INFORMACJI*/
+.info_tekst{
+        background: #e866bd;
+	font-size: 18px;
+	color: #102112;
+	border: solid 2px #573928;
+	padding: 5px;
+	margin: 5px 0px;
+}
+			/*DOTYCZĄCE MENU*/
+
+/* Dodanie różowego koloru do menu */
+.menu {
+	background-color: #e692d7;
+	overflow: hidden;		/*Overflow hidden oznacza, że części za dużego elementu będą ukryte, zamiast nieładnie wystawiać bądź tworzyć suwak*/
+}
+
+/* Linki wewnątrz menu */
+.menu a {
+	float: left;	/*W lewej stronie*/
+	display: inline-block;	/*Wyświetla element jako blokowy, ale w jednej linijce*/
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;		/*Wypelnienie góra dół na 14px, prawa lewa na 16px. Odstęp pomiędzy elementami menu oraz nadanie im pewnej wysokości, by dobrze wyglądały*/
+	text-decoration: none; 	/*Usuwa podkreśllenie z hiperłącz. Bez tego elementy menu byłyby podkreślone*/
+	font-size: 17px;
+}
+
+/* Zmiana koloru gdy najechane kursorem */
+.menu a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* Inny kolor w menu aktualnej strony */
+.menu a.active {
+	background-color: #d41ec1;
+	color: white;			/*Kolor czcionki*/
+}
+
+/* Ukrycie rozwijanej ikony menu na dużych ekranach */
+.menu .icon {
+	display: none;
+}
+
+	/* 	RESPONSYWNOŚĆ	*/
+	
+@media screen and (max-width: 1280px){
+	#dalej img{width:70%}
+	
+	.form_ele{width: 65%;}	/*Na mniejszych ekranach niech label elementu formularza i ten element będą ustawione jeden pod drugim*/
+	
+	#infoPrzyciski button{width: 80%}	/*Niech przyciski w 'informacje' będą ustawione pionowo*/
+        #logreg, #logreg tr, #logreg td {
+            width: 70%;
+        }
+}
+	
+@media screen and (max-width: 920px){
+	#tresc{
+		flex-direction: column; 	/* elementy zostaną ułożone jeden pod drugim */
+		justify-content: center; 	/* wyśrodkowanie na osi poziomej */
+		align-items: center; 		/* wyśrodkowanie na osi pionowej */
+	}
+	#tresc *{			/*Elementy zajmują pełną szerokość strony, po tym jak zostały ustawione jeden pod drugim*/
+		width: 100%;
+	}
+	
+	#dalej img{width:85%}
+	
+	.kolumna{width: 100%;} 	/*Niech pogoda i mapa będą ustawione pionowo*/
+	
+	.slajd{width: 40%;}		/*Na średnich ekranach chce 2 kolumny w galerii*/
+	#zdjecie{
+		width: 65%;
+		height: 40%;
+	}
+	
+	form{width: 90%;}
+        #logreg, #logreg tr, #logreg td {
+            width: 100%;
+        }
+}
+
+@media screen and (max-width: 600px) {
+	/* Uaktywnienie ikony trzech pasków menu oraz ukrycie wszystkich dotychczasowych linków oprócz aktualnej strony */
+	.menu a:not(.active) {display: none;}
+	.menu a.icon {
+		float: right;
+		display: block;
+	}
+	
+	#tresc, #dalej:not(#adnotacja){	/*zmniejszenie rozmiaru czcionk w #tresc i #dalej, ale z pominieciem adnotacji (w jej przypadku byłoby to zwiększenie)*/
+		font-size: 14px;
+	}
+	
+	#dalej img{
+		width: 85%;
+	}
+	
+	.slajd{
+		width: 90%;			/*Na małych ekranach 1 kolumna*/
+		margin: 2% 4%;		/*Większe odstępy*/
+	}
+	
+	#zdjecie{
+		width: 100%;
+		height: 70%;
+	}
+	
+	form{width: 100%}
+	.form_ele{width: 90%}
+	
+/* 'responsive' jest dodawane do klasy menu poprzez JS. Gdy już jest to zrobione, poniższe reguły CSS pozwalają utworzyć efekt menu dropdown */
+	.menu.responsive {position: relative;}
+	.menu.responsive .icon {
+		position: absolute;		/*Ikona trzech pasków jest ustawiana w prawym górnym rogu wobec elementu menu, któremu dano relative*/
+		right: 0;
+		top: 0;
+	}
+	.menu.responsive a {
+		float: none;		/*Dzięki temu elementy wyświetlają się pionowo*/
+		display: block;		/*Elementy wyświetlane blokowo, a więc jeden pod drugim*/
+		text-align: left;
+	}
+}

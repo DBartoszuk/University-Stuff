@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ogrody japońskie</title>
+		<!-- Trzy kreski w menu gdy rozdzielczość jest mała zaimportowane z font-awesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+		<!-- 2 poniższe linijki odpowiadają za bootsrap-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+		<!-- 2 poniższe linijki odpowiadają za mapę, korzystam z biblioteki leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+		<!-- Dodanie pliku z regułami css-->
+		<link rel="stylesheet" href="CSS/style.css" type="text/css">
+		<!-- Dodanie pliku z funkcjami JS-->
+		<script src="JS/strona_glowna.js"></script>
+	</head>
+	<body>
+		<div id="baner"><h1>Ogrody japońskie</h1></div>
+		<div class="menu" id="menu">
+			<a href="index.html" class="active">Strona Główna</a>	<!-- Klasa active sprawia, że dzięki css aktualna strona ma inną barwę w menu-->
+			<a href="galeria.html">Galeria</a>
+			<a href="loteria.html">Loteria</a>
+			<a href="informacje.html">Informacje</a>
+			<a href="javascript:void(0);" class="icon" onclick="zmienKlase()">
+			<!-- Dzięki javascript:void(0); zwracana jest wartość undefined. Dzięki temu link nie przekierowywuje nigdzie, przeglądarka zostaje na tej samej stronie-->
+				<i class="fa fa-bars"></i>		<!-- Dodanie trzech kresek do menu-->
+			</a>
+		</div>
+		<h3>Strona główna</h3>
+		<div id="tresc">
+			<div id="karuzela">
+					<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">	<!--Wykorzystanie Bootstrapa by był slajder-karuzela. Lab10-->
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="Images/Obraz1.jpg" class="img-fluid rounded mb-4 mb-lg-0" alt="Obraz1" style="height: 350px">
+							</div>
+							<div class="carousel-item">
+								<img src="Images/Obraz2.jpg" class="img-fluid rounded mb-4 mb-lg-0" alt="Obraz2" style="height: 350px">
+							</div>
+							<div class="carousel-item">
+								<img src="Images/Obraz3.jpg" class="img-fluid rounded mb-4 mb-lg-0" alt="Obraz3" style="height: 350px">
+							</div>
+		<!-- Jeżeli chce dodać więcej zdjęć to wystarczy skopiować <div class="carousel-item"> z zawartością i zmienić src-->
+						</div>
+					</div>
+			</div>
+			<p id="strona_glowna">
+				Witamy na naszej stronie poświęconej pięknu i harmonii japońskich ogrodów. Japońskie ogrody to nie tylko miejsca o niezwykłej estetyce, ale także o głębokim znaczeniu kulturowym i duchowym. Zainspirowane filozofią zen, te mistyczne enklawy natury stanowią doskonały przykład połączenia sztuki, nauki i harmonii z otaczającym światem.
+				Japońskie ogrody mają długą i fascynującą historię, sięgającą tysiącleci. Początkowo inspirowane chińskimi wzorcami, z biegiem czasu wykształciły swoje unikalne cechy i style. Są one nie tylko przestrzeniami do wypoczynku i kontemplacji, ale także odzwierciedlają głębokie powiązanie z naturą oraz szacunek dla żywiołów i cyklu życia.
+				Ważną cechą japońskich ogrodów jest ich minimalistyczne podejście do projektowania. Stawiają one na prostotę, subtelność i asymetrię, tworząc wrażenie naturalności i równowagi. Wśród charakterystycznych elementów można wymienić kamyki, mostki, pagody, stawy, strumienie, bonsai oraz rośliny o znaczeniu symbolicznym, takie jak klon japoński czy bambus. Każdy element ma swoje znaczenie i jest starannie umieszczony, aby osiągnąć harmonię wizualną i duchową.
+				Filozofia zen jest również głęboko zakorzeniona w japońskich ogrodach. Ograniczenie hałasu i rozproszenia ma na celu umożliwienie odnalezienia spokoju i wewnętrznej równowagi. Przechodzenie przez ogrody jest często zaplanowane w taki sposób, aby kroki stawały się medytacją, a obserwacja natury prowadziła do kontemplacji.
+			</p>
+		</div>
+		<br>
+		<div id="dalej">
+		<!-- Znacznik <i></i> odpowiada za pochylenie napisów-->
+			Jednym z najbardziej znanych ogrodów na świecie jest ogród <i>Kenroku-en</i> w <i>Kanazawie</i>, słynący ze swojego ogromu, a co za tym idzie: ilości scenicznych widoków. Pośród zieleni i stawów można odnaleźć tradycyjne herbaciarnie, wiosną podziwiać kwitnięcie ponad 400 drzew wiśni i śliw ozdobnych. Nie można również zapomnieć o licznych strumieniach, mostach jak i również wszechobecnych kwiatów oraz drzew. Jego nazwa oznacza dosłownie <i>"Ogród Sześciu Wzniosłości"</i>, albowiem nawiązuje on do chińskiej teorii, że na ogród doskonały skłądają się:<br> 
+			<p id="wznioslosci">-Przestronność<br>-Odosobnienie<br>-Sztuczność<br>-Starożytność<br>-Obfitość wody<br>-Szerokie widoki</p>
+			<img src="Images/Obraz4.jpg" alt="Obraz4">
+			<p id="adnotacja">Nie bez powodu ogród ten i jego zawartość stały się symbolami Kanazawy</p>
+		</div>
+		<div class="kolumna" id="lewy">
+			<p>Oto lokalizacja tego przepięknego ogrodu:</p>
+			<div id="map" style="width:425px; height:325px;"></div>
+		</div>
+		<div class="kolumna" id="prawy">
+			<p>Oto aktualna pogoda w tym miejscu:</p>
+			<div id="pogodaKontener">
+				<button class="buttonPogoda" onclick="pogoda(1)">Podstawowe informacje</button>
+				<button class="buttonPogoda" onclick="pogoda(2)">Dodatkowe informacje</button><br>
+				<div id="pogoda"></div>
+			</div>
+		</div>
+		<footer> &copy;Dominik Bartoszuk</footer>
+	</body>
+</html>
